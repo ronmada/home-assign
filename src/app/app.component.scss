@@ -1,0 +1,125 @@
+main {
+  padding: 46px 20px 0px;
+}
+.product-main-container {
+  display: grid;
+  grid-template-areas: "";
+  position: relative;
+  background: #ffffff;
+  box-shadow: 0px 51px 114px rgba(199, 199, 199, 0.15),
+    0px 15.375px 34.3677px rgba(199, 199, 199, 0.0895633),
+    0px 6.38599px 14.2746px rgba(199, 199, 199, 0.0605927),
+    0px 2.30969px 5.16283px rgba(199, 199, 199, 0.0352376);
+  border-radius: 12px;
+  padding: 32px 20px 0;
+}
+.best_choice_value-area {
+  position: absolute;
+  top: -16px;
+  left: -6px;
+}
+.product-number-area {
+  position: absolute;
+  top: -38px;
+  right: 24px;
+}
+.product-number-area > span {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  text-transform: capitalize;
+  color: rgba(85, 98, 110, 0.25);
+}
+.product-rating-area {
+  display: grid;
+  gap: 2px;
+}
+.product-discount-area {
+}
+.product-discount-area > span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  background: #55a0ea;
+  border-radius: 4px;
+  padding: 2px 4px;
+  text-align: center;
+}
+.product-descp-area {
+}
+.product-descp-area > span {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: #55626e;
+}
+.view-deal-btn-area {
+}
+.view-deal-btn-area > button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  padding: 10px 80px;
+  color: #ffffff;
+  background: #0b76e0;
+  border-radius: 12px;
+  border: 0;
+  display: block;
+  width: 100%;
+}
+.on-amazon-area {
+}
+.on-amazon-area > span {
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: #55626e;
+}
+.show-more-toggle-area {
+  display: flex;
+  gap: 4px;
+  cursor: pointer;
+}
+.show-more-toggle-area > span {
+  font-size: 14px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: #55626e;
+}
+.is-show-more {
+  transform: rotate(-180deg);
+}
+
+.show-more-container {
+  display: grid;
+  gap: 24px;
+  height: 0;
+  overflow: hidden;
+}
+.show-more-container.expanded {
+  height: auto;
+}
+.show-more-bullets-section {
+  display: grid;
+  gap: 8px;
+}
+.main-highlights {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 140%;
+  color: #55626e;
+}
+.show-more-bullets-texts {
+  display: grid;
+  padding-inline-start: 19px;
+}
+.show-more-bullets-texts > p {
+  font-size: 12px;
+  line-height: 140%;
+  letter-spacing: 0.2px;
+  color: #7b8997;
+}

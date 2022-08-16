@@ -1,4 +1,72 @@
-<p>app comp</p>
-<div>
-  <img src="assets/best_choice.png" />
-</div>
+<main>
+  <div class="product-main-container">
+    <div class="product-number-area">
+      <span>01</span>
+    </div>
+    <div class="best_choice_value-area">
+      <img src="assets/best_choice.png" />
+    </div>
+    <div class="product-image-area">
+      <img src="assets/tv-image.png" />
+    </div>
+    <div class="product-maker-area">
+      <span>SONY</span>
+    </div>
+    <div class="product-rating-area">
+      <img src="assets/score-1.png" />
+      <img src="assets/stars-1.png" />
+    </div>
+    <div class="product-discount-area">
+      <span>50% OFF</span>
+    </div>
+    <div class="product-descp-area">
+      <span
+        >Sony X95J 85 Inch TV: BRAVIA XR Full Array LED 4K Ultra HD Smart Google
+        TV</span
+      >
+    </div>
+    <div class="view-deal-btn-area">
+      <button type="button">View Deal</button>
+    </div>
+    <div class="on-amazon-area">
+      <span>On Amazon</span>
+    </div>
+    <div class="show-more-toggle-area" (click)="toggleIsShowMore()">
+      <span>Show more</span>
+      <img
+        src="assets/show-more-arrow.svg"
+        class="show-more-arrow"
+        [class.is-show-more]="isShowMore"
+      />
+    </div>
+    <div class="show-more-container" [class.expanded]="isShowMore">
+      <div class="show-more-bullets-section">
+        <p class="main-highlights">Main Highlights</p>
+        <ul class="show-more-bullets-texts">
+          <li>
+            4K Ultra HD (2160p resolution): Enjoy breathtaking 4K movies and TV
+            shows at 4 times the resolution of Full HD, and upscale your current
+            content to Ultra HD-level picture quality.
+          </li>
+          <li>
+            Voice remote with Alexa: Use the sound of your voice to do
+            everything a regular remote would do: Switch streaming services,
+            inputs, channels and much more.
+          </li>
+          <li>
+            Access thousands of sAhows with Fire TV - Watch over 1 million
+            streaming movies and TV episodes with access to thousands of
+            channels, apps and Alexa skills, including Apple TV+, Disney+, Hulu,
+            Netflix, Prime Video, Sling TV, YouTube and other services right
+            from this TV.
+          </li>
+          <li>
+            Hands-free control: Pair with your Amazon Echo and go hands-free,
+            controlling volume, search, channels and more.
+          </li>
+        </ul>
+      </div>
+      <p></p>
+    </div>
+  </div>
+</main>
