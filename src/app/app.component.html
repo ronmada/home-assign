@@ -1,72 +1,376 @@
 <main>
-  <div class="product-main-container">
-    <div class="product-number-area">
-      <span>01</span>
-    </div>
-    <div class="best_choice_value-area">
-      <img src="assets/best_choice.png" />
-    </div>
-    <div class="product-image-area">
-      <img src="assets/tv-image.png" />
-    </div>
-    <div class="product-maker-area">
-      <span>SONY</span>
-    </div>
-    <div class="product-rating-area">
-      <img src="assets/score-1.png" />
-      <img src="assets/stars-1.png" />
-    </div>
-    <div class="product-discount-area">
-      <span>50% OFF</span>
-    </div>
-    <div class="product-descp-area">
-      <span
-        >Sony X95J 85 Inch TV: BRAVIA XR Full Array LED 4K Ultra HD Smart Google
-        TV</span
-      >
-    </div>
-    <div class="view-deal-btn-area">
-      <button type="button">View Deal</button>
-    </div>
-    <div class="on-amazon-area">
-      <span>On Amazon</span>
-    </div>
-    <div class="show-more-toggle-area" (click)="toggleIsShowMore()">
-      <span>Show more</span>
-      <img
-        src="assets/show-more-arrow.svg"
-        class="show-more-arrow"
-        [class.is-show-more]="isShowMore"
-      />
-    </div>
-    <div class="show-more-container" [class.expanded]="isShowMore">
-      <div class="show-more-bullets-section">
-        <p class="main-highlights">Main Highlights</p>
-        <ul class="show-more-bullets-texts">
-          <li>
-            4K Ultra HD (2160p resolution): Enjoy breathtaking 4K movies and TV
-            shows at 4 times the resolution of Full HD, and upscale your current
-            content to Ultra HD-level picture quality.
-          </li>
-          <li>
-            Voice remote with Alexa: Use the sound of your voice to do
-            everything a regular remote would do: Switch streaming services,
-            inputs, channels and much more.
-          </li>
-          <li>
-            Access thousands of sAhows with Fire TV - Watch over 1 million
-            streaming movies and TV episodes with access to thousands of
-            channels, apps and Alexa skills, including Apple TV+, Disney+, Hulu,
-            Netflix, Prime Video, Sling TV, YouTube and other services right
-            from this TV.
-          </li>
-          <li>
-            Hands-free control: Pair with your Amazon Echo and go hands-free,
-            controlling volume, search, channels and more.
-          </li>
-        </ul>
+  <div class="products-list">
+    <div class="product-main-container">
+      <div class="grid1">
+        <div class="product-number-area">
+          <span>01</span>
+        </div>
+        <div class="best_choice_value-area">
+          <img src="assets/best_choice.png" />
+        </div>
+        <div class="product-image-and-stars">
+          <div></div>
+          <div class="product-image-area">
+            <img src="assets/tv-image.png" />
+          </div>
+          <div class="product-rating-area">
+            <img src="assets/score-1.png" />
+            <img src="assets/stars-1.png" />
+          </div>
+        </div>
+        <div class="product-maker-area">
+          <span>SONY</span>
+        </div>
+        <div class="product-discount-area">
+          <span class="product-discount-off">50% OFF</span>
+        </div>
+        <div class="product-descp-area">
+          <span
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array LED 4K Ultra HD Smart
+            Google TV</span
+          >
+        </div>
+        <div class="view-deal-btn-area">
+          <button type="button" class="view-deal-btn">View Deal</button>
+        </div>
+        <div class="on-amazon-show-more-mobile">
+          <div class="on-amazon-area">
+            <span>On Amazon</span>
+          </div>
+          <div class="show-more-toggle-area" (click)="toggleIsShowMore(0)">
+            <span>
+              <ng-container *ngIf="isShowMore[0]; else showMore">
+                Show Less
+              </ng-container>
+              <ng-template #showMore> Show more </ng-template></span
+            >
+            <img
+              src="assets/show-more-arrow.svg"
+              class="show-more-arrow"
+              [class.is-show-more]="isShowMore[0]"
+            />
+          </div>
+        </div>
       </div>
-      <p></p>
+      <div class="show-more-container-area" [class.expanded]="isShowMore[0]">
+        <div class="show-more-bullets-section">
+          <p class="main-highlights">Main Highlights</p>
+          <ul class="show-more-bullets-texts">
+            <li>
+              4K Ultra HD (2160p resolution): Enjoy breathtaking 4K movies and
+              TV shows at 4 times the resolution of Full HD, and upscale your
+              current content to Ultra HD-level picture quality.
+            </li>
+            <li>
+              Voice remote with Alexa: Use the sound of your voice to do
+              everything a regular remote would do: Switch streaming services,
+              inputs, channels and much more.
+            </li>
+            <li>
+              Access thousands of sAhows with Fire TV - Watch over 1 million
+              streaming movies and TV episodes with access to thousands of
+              channels, apps and Alexa skills, including Apple TV+, Disney+,
+              Hulu, Netflix, Prime Video, Sling TV, YouTube and other services
+              right from this TV.
+            </li>
+            <li>
+              Hands-free control: Pair with your Amazon Echo and go hands-free,
+              controlling volume, search, channels and more.
+            </li>
+          </ul>
+        </div>
+        <div class="product-footer-container">
+          <div class="product-price-area">
+            <span class="main-price-black">$99.00</span>
+          </div>
+          <div class="product-footer-discount-area">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+          <div class="amazon-logo-area">
+            <img src="assets/amazon-logo.png" class="amazon-logo-img" />
+          </div>
+          <div class="view-button-area">
+            <button type="button">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-main-container">
+      <div class="grid1">
+        <div class="product-number-area">
+          <span>02</span>
+        </div>
+        <div class="best_choice_value-area">
+          <img src="assets/best_value.png" />
+        </div>
+        <div class="product-image-and-stars">
+          <div></div>
+          <div class="product-image-area">
+            <img src="assets/tv-image.png" />
+          </div>
+          <div class="product-rating-area">
+            <img src="assets/score-1.png" />
+            <img src="assets/stars-1.png" />
+          </div>
+        </div>
+        <div class="product-maker-area">
+          <span>SONY</span>
+        </div>
+        <div class="product-discount-area">
+          <span class="product-discount-off">50% OFF</span>
+        </div>
+        <div class="product-descp-area">
+          <span
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array LED 4K Ultra HD Smart
+            Google TV</span
+          >
+        </div>
+        <div class="view-deal-btn-area">
+          <button type="button" class="view-deal-btn">View Deal</button>
+        </div>
+        <div class="on-amazon-show-more-mobile">
+          <div class="on-amazon-area">
+            <span>On Amazon</span>
+          </div>
+          <div class="show-more-toggle-area" (click)="toggleIsShowMore(1)">
+            <span>
+              <ng-container *ngIf="isShowMore[1]; else showMore">
+                Show Less
+              </ng-container>
+              <ng-template #showMore> Show more </ng-template></span
+            >
+            <img
+              src="assets/show-more-arrow.svg"
+              class="show-more-arrow"
+              [class.is-show-more]="isShowMore[1]"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="show-more-container-area" [class.expanded]="isShowMore[1]">
+        <div class="show-more-bullets-section">
+          <p class="main-highlights">Main Highlights</p>
+          <ul class="show-more-bullets-texts">
+            <li>Packaging may vary.</li>
+            <li>An ideal gift set.</li>
+            <li>Helps you brush longer with the 2 minutes embedded timer.</li>
+            <li>
+              Battery lasts more than 2 weeks with 1 charge with the Lithium-ION
+              battery.
+            </li>
+            <li>3 BRUSHING MODES: daily clean, whitening and sensitive.</li>
+            <li>
+              For a clean that wow – remove bacteria by removing up to 100% more
+              plaque vs. a manual toothbrush.
+            </li>
+          </ul>
+        </div>
+        <div class="product-footer-container">
+          <div class="product-price-area">
+            <span class="main-price-black">$99.00</span>
+          </div>
+          <div class="product-footer-discount-area">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+          <div class="amazon-logo-area">
+            <img src="assets/amazon-logo.png" class="amazon-logo-img" />
+          </div>
+          <div class="view-button-area">
+            <button type="button">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="related-top-text">Related Deals You Might Like For Tv</p>
+  <div class="related-products-container">
+    <div class="related-product">
+      <div class="related-product-image-logo-container">
+        <img src="assets/tv-image.png" />
+        <img src="assets/amazon-logo.png" />
+      </div>
+      <div class="related-product-info">
+        <div class="frame-17930">
+          <div class="frame-17776">
+            <span class="product-discount-off">50% OFF</span>
+            <span class="free-shipping">Free shipping</span>
+          </div>
+          <span class="related-product-main-desc-text"
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array
+          </span>
+          <span class="related-product-secondary-text"
+            >4K Ultra HD Smart Google</span
+          >
+        </div>
+        <div class="related-product-price">
+          <span class="main-price-black">$99.00</span>
+          <div class="price-discount">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+        </div>
+        <div class="view-deal-btn-sec">
+          <button type="button" class="view-deal-btn realted">View deal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-product">
+      <div class="related-product-image-logo-container">
+        <img src="assets/tv-image.png" />
+        <img src="assets/amazon-logo.png" />
+      </div>
+      <div class="related-product-info">
+        <div class="frame-17930">
+          <div class="frame-17776">
+            <span class="product-discount-off">50% OFF</span>
+            <!-- <span class="free-shipping">Free shipping</span> -->
+          </div>
+          <span class="related-product-main-desc-text"
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array
+          </span>
+          <span class="related-product-secondary-text"
+            >4K Ultra HD Smart Google</span
+          >
+        </div>
+        <div class="related-product-price">
+          <span class="main-price-black">$99.00</span>
+          <div class="price-discount">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+        </div>
+        <div class="view-deal-btn-sec">
+          <button type="button" class="view-deal-btn realted">View deal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-product">
+      <div class="related-product-image-logo-container">
+        <img src="assets/tv-image.png" />
+        <img src="assets/amazon-logo.png" />
+      </div>
+      <div class="related-product-info">
+        <div class="frame-17930">
+          <div class="frame-17776">
+            <!-- <span class="product-discount-off">50% OFF</span> -->
+            <span class="free-shipping">Free shipping</span>
+          </div>
+          <span class="related-product-main-desc-text"
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array
+          </span>
+          <span class="related-product-secondary-text"
+            >4K Ultra HD Smart Google</span
+          >
+        </div>
+        <div class="related-product-price">
+          <span class="main-price-black">$99.00</span>
+          <div class="price-discount">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+        </div>
+        <div class="view-deal-btn-sec">
+          <button type="button" class="view-deal-btn realted">View deal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-product">
+      <div class="related-product-image-logo-container">
+        <img src="assets/tv-image.png" />
+        <img src="assets/amazon-logo.png" />
+      </div>
+      <div class="related-product-info">
+        <div class="frame-17930">
+          <div class="frame-17776">
+            <span class="product-discount-off">50% OFF</span>
+            <span class="free-shipping">Free shipping</span>
+          </div>
+          <span class="related-product-main-desc-text"
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array
+          </span>
+          <span class="related-product-secondary-text"
+            >4K Ultra HD Smart Google</span
+          >
+        </div>
+        <div class="related-product-price">
+          <span class="main-price-black">$99.00</span>
+          <div class="price-discount">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+        </div>
+        <div class="view-deal-btn-sec">
+          <button type="button" class="view-deal-btn realted">View deal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-product">
+      <div class="related-product-image-logo-container">
+        <img src="assets/tv-image.png" />
+        <img src="assets/amazon-logo.png" />
+      </div>
+      <div class="related-product-info">
+        <div class="frame-17930">
+          <div class="frame-17776">
+            <span class="product-discount-off">50% OFF</span>
+            <!-- <span class="free-shipping">Free shipping</span> -->
+          </div>
+          <span class="related-product-main-desc-text"
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array
+          </span>
+          <span class="related-product-secondary-text"
+            >4K Ultra HD Smart Google</span
+          >
+        </div>
+        <div class="related-product-price">
+          <span class="main-price-black">$99.00</span>
+          <div class="price-discount">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+        </div>
+        <div class="view-deal-btn-sec">
+          <button type="button" class="view-deal-btn realted">View deal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="related-product">
+      <div class="related-product-image-logo-container">
+        <img src="assets/tv-image.png" />
+        <img src="assets/amazon-logo.png" />
+      </div>
+      <div class="related-product-info">
+        <div class="frame-17930">
+          <div class="frame-17776">
+            <!-- <span class="product-discount-off">50% OFF</span> -->
+            <!-- <span class="free-shipping">Free shipping</span> -->
+          </div>
+          <span class="related-product-main-desc-text"
+            >Sony X95J 85 Inch TV: BRAVIA XR Full Array
+          </span>
+          <span class="related-product-secondary-text"
+            >4K Ultra HD Smart Google</span
+          >
+        </div>
+        <div class="related-product-price">
+          <span class="main-price-black">$99.00</span>
+          <div class="price-discount">
+            <span class="discount-line-through">$199.00</span>
+            <span class="discount-percentage">(26% off)</span>
+          </div>
+        </div>
+        <div class="view-deal-btn-sec">
+          <button type="button" class="view-deal-btn realted">View deal</button>
+        </div>
+      </div>
     </div>
   </div>
 </main>

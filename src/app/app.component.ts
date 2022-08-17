@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  public isShowMore = false;
+  public isShowMore = [false, false];
 
-  public toggleIsShowMore(): void {
-    this.isShowMore = !this.isShowMore;
+  public toggleIsShowMore(index: number): void {
+    this.isShowMore[index] = !this.isShowMore[index];
   }
 }
